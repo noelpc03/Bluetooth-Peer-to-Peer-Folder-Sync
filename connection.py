@@ -34,13 +34,13 @@ def start_server(local_mac, port):
     while True:
         try:
             with socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM) as sock:
-                sock.bind((local_mac, port))
-                sock.listen(1)
+                sock.bind((local_mac, port))  #se enlaza el socket a la direccion MAC local y al puerto
+                sock.listen(1)  # se pone le socket en modo de escucha para aceptar conexiones entrantes
                 print("Servidor Bluetooth en espera de conexiones...")
-                log_sync_event("Servidor Bluetooth iniciado")
+                log_sync_event("Servidor Bluetooth iniciado") # se registra el evento
 
-                while True:
-                    client_sock, address = sock.accept()
+                while True: # aceptar conexiones entrantes
+                    client_sock, address = sock.accept() # si obtiene un socket cliente y su direccion
                     print(f"Conexión aceptada de {address[0]}")
                     log_sync_event(f"Conexión aceptada de {address[0]}")
 
@@ -64,7 +64,7 @@ def handle_client(client_sock):
             # Operación de eliminación
             filepath = os.path.join(SYNC_FOLDER, filename)
             if os.path.exists(filepath):
-                os.remove(filepath)
+                os.remove(filepath) # Si el archivo existe en la carpeta de sincro, lo elimina y registra el evento
                 print(f"Archivo eliminado: {filename}")
                 log_sync_event(f"Archivo eliminado: {filename}")
         elif operation == "CREATE" or operation == "MODIFY":
@@ -79,6 +79,7 @@ def handle_client(client_sock):
             print(f"Recibiendo archivo: {filename} ({filesize} bytes)")
             log_sync_event(f"Recibiendo archivo: {filename} ({filesize} bytes)")
             
+            #escribir los datos y actuliza la cantidad total de datos recibidos
             with open(filepath, "wb") as f:
                 received = 0
                 while received < filesize:
@@ -86,6 +87,7 @@ def handle_client(client_sock):
                     f.write(data)
                     received += len(data)
 
+            #despues de recibido el archivo completo , se calcula el hash
             if get_file_hash(filepath) == file_hash:
                 print(f"Archivo recibido y verificado correctamente: {filename}")
                 log_sync_event(f"Archivo recibido y verificado correctamente: {filename}")
@@ -101,11 +103,14 @@ def handle_client(client_sock):
 
 def send_file(filepath, peer_mac, port):
     """Cliente que envía un archivo."""
+
+    #verificacion de existencia de archivo
     if not os.path.exists(filepath):
         print(f"El archivo especificado no existe: {filepath}")
         log_sync_event(f"Intento de envío de archivo inexistente: {filepath}")
         return
 
+    #obtencion de metadatos del archivo
     filesize = os.path.getsize(filepath)
     filename = os.path.basename(filepath)
     file_hash = get_file_hash(filepath)
@@ -114,12 +119,14 @@ def send_file(filepath, peer_mac, port):
     max_retries = 3
     retry_delay = 2
 
+    #intento de envio del archivo
     for attempt in range(max_retries):
         try:
             with socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM) as sock:
-                sock.connect((peer_mac, port))
-                sock.send(metadata.encode())
+                sock.connect((peer_mac, port)) # crea un socket y se conecta el dispositivo peer en el puerto 
+                sock.send(metadata.encode())#envia los metadatos del archivo
 
+                #abre el archivo y los envia en frag de 1024 bytes
                 with open(filepath, "rb") as f:
                     while chunk := f.read(1024):
                         sock.send(chunk)
@@ -138,6 +145,8 @@ def send_file(filepath, peer_mac, port):
 
 def send_delete_notification(filename, peer_mac, port):
     """Notifica la eliminación de un archivo."""
+
+    #crea una cadena de metadatos que indica una opearcion de DELETE
     metadata = f"DELETE::{filename}::0::0"
 
     try:
@@ -153,24 +162,26 @@ def send_delete_notification(filename, peer_mac, port):
 
 class SyncHandler(FileSystemEventHandler):
     """Manejador de eventos para sincronización."""
-
+    # se llama cuando se crea un archivo
     def on_created(self, event):
         if not event.is_directory:
             send_file(event.src_path, PEER_MAC, PORT)
-
+    
+    # se llama cuando se elimina un archivo
     def on_deleted(self, event):
         if not event.is_directory:
             send_delete_notification(os.path.basename(event.src_path), PEER_MAC, PORT)
 
+    #se llama cuando se modifica un archivo
     def on_modified(self, event):
         if not event.is_directory:
             send_file(event.src_path, PEER_MAC, PORT)
 
 def start_sync_monitor():
     """Inicia el monitoreo de la carpeta de sincronización."""
-    event_handler = SyncHandler()
-    observer = Observer()
-    observer.schedule(event_handler, SYNC_FOLDER, recursive=True)
+    event_handler = SyncHandler() # clase que manejara los eventos de cambios en la carpeta de sincro
+    observer = Observer() # objeto que observara los cambios en el sistema de archivos
+    observer.schedule(event_handler, SYNC_FOLDER, recursive=True) # Programa el observador para que use el event_handler para monitorear la carpeta SYNC_FOLDER. El parámetro recursive=True indica que también se deben monitorear los subdirectorios dentro de SYNC_FOLDER
     observer.start()
     print(f"Monitoreando cambios en la carpeta: {SYNC_FOLDER}")
     log_sync_event(f"Iniciado monitoreo de la carpeta: {SYNC_FOLDER}")
@@ -184,10 +195,10 @@ def start_sync_monitor():
 
 def initial_sync():
     """Realiza una sincronización inicial de todos los archivos en la carpeta."""
-    for root, dirs, files in os.walk(SYNC_FOLDER):
+    for root, files in os.walk(SYNC_FOLDER): # se recorre el directorio 
         for file in files:
-            filepath = os.path.join(root, file)
-            send_file(filepath, PEER_MAC, PORT)
+            filepath = os.path.join(root, file) # se construye la ruta completa del archivo
+            send_file(filepath, PEER_MAC, PORT) # se envia el archivo
 
 if __name__ == "__main__":
     # Iniciar servidor y monitor simultáneamente
