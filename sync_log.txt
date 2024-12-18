@@ -1,0 +1,105 @@
+Tue Dec 17 19:47:15 2024: Iniciado monitoreo de la carpeta: sync_folder
+Tue Dec 17 19:47:15 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:20 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:25 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:30 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:35 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:40 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:45 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:50 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:47:55 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:48:00 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:48:05 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:48:10 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:48:15 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:48:20 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:48:25 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 19:48:30 2024: Error en el servidor Bluetooth: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted. Reiniciando el servidor...
+Tue Dec 17 20:01:46 2024: Iniciado monitoreo de la carpeta: sync_folder
+Tue Dec 17 20:01:46 2024: Servidor Bluetooth iniciado
+Tue Dec 17 20:02:05 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:02:05 2024: Recibiendo archivo: bluetooth_folder_sync.py (0 bytes)
+Tue Dec 17 20:02:05 2024: Archivo recibido y verificado correctamente: bluetooth_folder_sync.py
+Tue Dec 17 20:02:05 2024: Archivo enviado correctamente: bluetooth_folder_sync.py
+Tue Dec 17 20:02:27 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:02:27 2024: Recibiendo archivo: script.py (2 bytes)
+Tue Dec 17 20:02:27 2024: Archivo recibido y verificado correctamente: script.py
+Tue Dec 17 20:02:28 2024: Archivo enviado correctamente: script.py
+Tue Dec 17 20:02:28 2024: Archivo enviado correctamente: script.py
+Tue Dec 17 20:02:47 2024: Archivo enviado correctamente: asjdasdals
+Tue Dec 17 20:02:47 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:03:05 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:03:05 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:03:14 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:03:16 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:03:16 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:03:16 2024: Recibiendo archivo: java.py (15 bytes)
+Tue Dec 17 20:03:16 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:03:16 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:03:16 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:03:19 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:03:19 2024: Recibiendo archivo: java.py (0 bytes)
+Tue Dec 17 20:03:19 2024: Error: El hash del archivo recibido no coincide: java.py
+Tue Dec 17 20:03:19 2024: Error al enviar archivo java.py (intento 1): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:03:21 2024: Error al enviar archivo java.py (intento 2): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:03:23 2024: Error al enviar archivo java.py (intento 3): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:03:23 2024: Fallo en el envío del archivo java.py después de 3 intentos.
+Tue Dec 17 20:03:23 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:03:23 2024: Recibiendo archivo: java.py (19 bytes)
+Tue Dec 17 20:03:23 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:03:23 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:03:23 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:14 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:14 2024: Recibiendo archivo: java.py (0 bytes)
+Tue Dec 17 20:04:14 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:04:14 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:14 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:14 2024: Recibiendo archivo: java.py (16 bytes)
+Tue Dec 17 20:04:14 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:04:14 2024: Error al enviar archivo java.py (intento 1): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:16 2024: Error al enviar archivo java.py (intento 2): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:18 2024: Error al enviar archivo java.py (intento 3): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:18 2024: Fallo en el envío del archivo java.py después de 3 intentos.
+Tue Dec 17 20:04:18 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:18 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:18 2024: Recibiendo archivo: java.py (16 bytes)
+Tue Dec 17 20:04:18 2024: Error al enviar archivo java.py (intento 1): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:20 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:20 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:20 2024: Recibiendo archivo: java.py (16 bytes)
+Tue Dec 17 20:04:20 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:04:20 2024: Error al enviar archivo java.py (intento 1): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:22 2024: Error al enviar archivo java.py (intento 2): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:24 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:24 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:24 2024: Recibiendo archivo: java.py (0 bytes)
+Tue Dec 17 20:04:24 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:04:24 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:24 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:24 2024: Recibiendo archivo: java.py (31 bytes)
+Tue Dec 17 20:04:24 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:04:24 2024: Error al enviar archivo java.py (intento 1): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:26 2024: Error al enviar archivo java.py (intento 2): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:28 2024: Error al enviar archivo java.py (intento 3): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:28 2024: Fallo en el envío del archivo java.py después de 3 intentos.
+Tue Dec 17 20:04:29 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:32 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:33 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:34 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:34 2024: Recibiendo archivo: java.py (0 bytes)
+Tue Dec 17 20:04:34 2024: Archivo recibido y verificado correctamente: java.py
+Tue Dec 17 20:04:34 2024: Error al enviar archivo java.py (intento 1): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:36 2024: Error al enviar archivo java.py (intento 2): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:38 2024: Error al enviar archivo java.py (intento 3): [WinError 10051] A socket operation was attempted to an unreachable network
+Tue Dec 17 20:04:38 2024: Fallo en el envío del archivo java.py después de 3 intentos.
+Tue Dec 17 20:04:46 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:46 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:04:46 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:04:46 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:05:01 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:05:01 2024: Archivo enviado correctamente: java.py
+Tue Dec 17 20:05:24 2024: Archivo enviado correctamente: free.py
+Tue Dec 17 20:05:24 2024: Conexión aceptada de 3C:F0:11:90:2C:60
+Tue Dec 17 20:05:24 2024: Recibiendo archivo: free.py (0 bytes)
+Tue Dec 17 20:05:24 2024: Archivo recibido y verificado correctamente: free.py
+Tue Dec 17 20:05:24 2024: Archivo enviado correctamente: free.py
